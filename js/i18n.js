@@ -156,7 +156,7 @@
     /* Persian: only the name and university names are translated, per request.
        Everything else intentionally falls back to English. */
     fa: {
-      "hero.name": "راضیه دهبزرگی",
+      "hero.name": "راضیه ده‌بزرگی",
       "edu.phd.degree": "Ph.D., Applied Mathematics",
       "edu.phd.uni": "دانشگاه علم و صنعت ایران &middot; 2014&ndash;2018",
       "edu.phd.uniname": "دانشگاه علم و صنعت ایران",
@@ -164,7 +164,7 @@
       "edu.msc.uniname": "دانشگاه رفسنجان",
       "edu.bsc.uni": "دانشگاه شیراز &middot; 2005&ndash;2009",
       "edu.bsc.uniname": "دانشگاه شیراز",
-      "aff.iasbs": "پژوهشگاه دانش‌های بنیادی (IASBS)",
+      "aff.iasbs": "دانشگاه تحصيلات تکمیلی زنجان (IASBS)",
       "aff.azad": "دانشگاه آزاد، تهران"
     }
   };
