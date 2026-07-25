@@ -414,7 +414,7 @@ section.section {
   width: 100%;
   height: 60vh;
   position: relative;
-	background: url(../img/intro-background.jpg) top center;
+	background: url(../img/intro-background.png) top center;
   background-size: cover;
 }
 
@@ -577,7 +577,9 @@ About
 		-moz-border-radius:50%;
 			border-radius:50%;
 }
-
+#section-about .col-md-7 p{
+    font-weight:600;
+}
 .team-detail h4 {
 	font-weight: 700;
 }
