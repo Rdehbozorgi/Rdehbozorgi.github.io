@@ -291,3 +291,50 @@ a.btn,.btn:focus {
 }
 
 
+
+/* ===== Publication cards (added for Raziyeh's CV site) ===== */
+.pub-card{
+  background:#f7fafb;
+  border:1px solid #e2edf0;
+  border-radius:6px;
+  padding:22px 20px;
+  min-height:190px;
+  margin-bottom:20px;
+  transition:box-shadow .2s ease, transform .2s ease;
+}
+.pub-card:hover{
+  box-shadow:0 6px 18px rgba(20,50,60,0.12);
+  transform:translateY(-3px);
+}
+.pub-card .pub-tag{
+  display:inline-block;
+  padding:3px 11px;
+  border-radius:12px;
+  background:#85b0be;
+  color:#fff;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.pub-card .pub-tag-alt{ background:#95cbdd; }
+.pub-card .pub-tag-review{ background:#d99a2b; }
+.pub-card h5{
+  margin-top:14px;
+  font-size:15px;
+  line-height:1.4;
+  color:#2b2b2b;
+}
+.pub-card p{
+  color:#8a9aa0;
+  font-size:12px;
+  margin-top:8px;
+}
+.affiliation-badge{
+  display:inline-block;
+  padding:8px 16px;
+  border:1px solid #dfe8ea;
+  border-radius:20px;
+  color:#5a6b70;
+  font-size:13px;
+  margin:6px;
+}
