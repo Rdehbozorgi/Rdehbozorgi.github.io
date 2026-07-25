@@ -403,3 +403,24 @@ body{ color:#4a4a4a; }
 /* ===== Math/AI decorative accent ===== */
 .math-accent{ display:block; margin:0 auto 24px; max-width:340px; }
 .math-accent svg{ width:100%; height:auto; }
+
+/* ===== Language switcher ===== */
+.lang-switcher{ display:flex; align-items:center; gap:4px; }
+.lang-switcher .lang-btn{
+  padding:4px 9px !important;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.03em;
+  border:1px solid rgba(255,255,255,0.4);
+  border-radius:4px;
+  color:#fff !important;
+  opacity:.7;
+}
+.lang-switcher .lang-btn.active,
+.lang-switcher .lang-btn:hover{
+  opacity:1;
+  background:rgba(255,255,255,0.15);
+}
+@media (max-width:767px){
+  .lang-switcher{ justify-content:center; padding:10px 0; }
+}
