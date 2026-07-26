@@ -33,28 +33,33 @@
   <section id="header" class="appear"></section>
   <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
     <div class="container">
-      <div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="fa fa-bars color-white"></span>
-  </button>
-  <div class="navbar-logo">
-    <a href="index.html"><img ... src="img/logo2.JPG" ...></a>
-  </div>
-</div>
+      <div class="navbar-header" style="float:right;">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bars color-white"></span>
+        </button>
+        <div class="lang-dashboard">
+          <button type="button" class="lang-dashboard-toggle" id="langToggle">
+            <i class="fa fa-globe"></i> <span id="langCurrent">EN</span> <i class="fa fa-caret-down"></i>
+          </button>
+          <ul class="lang-dashboard-menu" id="langMenu">
+            <li><a href="#" class="lang-btn active" data-lang="en">English</a></li>
+            <li><a href="#" class="lang-btn" data-lang="de">Deutsch</a></li>
+            <li><a href="#" class="lang-btn" data-lang="fr">Français</a></li>
+            <li><a href="#" class="lang-btn" data-lang="fa">فارسی</a></li>
+          </ul>
+        </div>
+        <div class="navbar-logo">
+          <a href="index.html"><img data-0="width:60px; border-radius:50%;" data-300="width:44px; border-radius:50%;" src="img/logo2.JPG" alt="Raziyeh Dehbozorgi" style="border-radius:50%;"></a>
+        </div>
+      </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+        <ul class="nav navbar-nav navbar-left" data-0="margin-top:20px;" data-300="margin-top:5px;">
           <li class="active"><a href="index.html" data-i18n="nav.home">Home</a></li>
           <li><a href="#section-about" data-i18n="nav.about">About</a></li>
           <li><a href="#section-works" data-i18n="nav.publications">Publications</a></li>
           <li><a href="#section-education" data-i18n="nav.education">Education</a></li>
           <li><a href="#section-contact" data-i18n="nav.contact">Contact</a></li>
-           </ul>
-          <ul class="nav navbar-nav lang-switcher" style="float:left; margin-left:20px;">
-    <li><a href="#" class="lang-btn active" data-lang="en">EN</a></li>
-    <li><a href="#" class="lang-btn" data-lang="de">DE</a></li>
-    <li><a href="#" class="lang-btn" data-lang="fr">FR</a></li>
-    <li><a href="#" class="lang-btn" data-lang="fa">FA</a></li>
-  </ul>   
+        </ul>
       </div>
       <!--/.navbar-collapse -->
     </div>
@@ -128,10 +133,10 @@
         <div class="col-lg-4">
           <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a mar-top20">
             <div class="float-left mar-right20">
-              <a href="#section-about" class="hi-icon hi-icon-list">Mobile</a>
+              <a href="#section-experience" class="hi-icon hi-icon-list">Mobile</a>
             </div>
           </div>
-          <h3 class="text-bold"><a href="#section-about" data-i18n="svc.exp.title">Experience</a></h3>
+          <h3 class="text-bold"><a href="#section-experience" data-i18n="svc.exp.title">Experience</a></h3>
           <p data-i18n="svc.exp.desc">6+ years postdoctoral research at IASBS</p>
 
           <div class="clear"></div>
@@ -265,6 +270,126 @@
     </div>
   </section>
   <!-- /about -->
+
+  <!-- academic & teaching experience -->
+  <section id="section-experience" class="section appear clearfix bg-white">
+    <div class="container">
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp" data-i18n="exp.heading">Academic &amp; Teaching Experience</h2>
+            <p data-i18n="exp.lede">Postdoctoral research, lecturing and teaching assistantships across six-plus years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="exp-timeline">
+            <div class="exp-item">
+              <span class="exp-date">2024 &ndash; 2025</span>
+              <h4 data-i18n="exp.postdoc2.title">Postdoctoral Researcher, Institute for Advanced Studies in Basic Sciences (IASBS)</h4>
+              <p data-i18n="exp.postdoc2.desc">Designed a Deep Ritz learning framework for solving elliptic PDEs using finite-element datasets (FreeFem++) to constrain and validate neural network solutions, tested on Poisson and Schr&ouml;dinger equations against classical FEM baselines.</p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-date">2019 &ndash; 2022</span>
+              <h4 data-i18n="exp.postdoc1.title">Postdoctoral Researcher, IASBS</h4>
+              <p data-i18n="exp.postdoc1.desc">Developed an adaptive hp-collocation method for nonlinear Abel inverse problems (existence, uniqueness, stability and error analysis in weighted Sobolev space), and engineered a Galerkin FEM/SEM solver for nonlinear fractional boundary value problems.</p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-date">2022 &ndash; 2024</span>
+              <h4 data-i18n="exp.azad.title">Part-time Lecturer, Azad Universities, Tehran</h4>
+              <p data-i18n="exp.azad.desc">Taught 6 core mathematics courses (Calculus I/II, ODEs, Linear Algebra, Numerical Analysis, Probability, Applied Mathematics in Finance) to undergraduate cohorts of 40&ndash;60 students.</p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-date">2018 &ndash; 2019</span>
+              <h4 data-i18n="exp.uast.title">Part-time Lecturer, University of Applied Sciences &amp; Technology</h4>
+              <p data-i18n="exp.uast.desc">Taught Calculus I/II, ODEs and Numerical Analysis to undergraduate cohorts of 40&ndash;60 students.</p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-date">2014 &ndash; 2015</span>
+              <h4 data-i18n="exp.ta.title">Teaching Assistant, Iran University of Science and Technology</h4>
+              <p data-i18n="exp.ta.desc">Supported instruction across 4 advanced courses and co-supervised at least 7 master's students through completion of their thesis research.</p>
+            </div>
+            <div class="exp-item">
+              <span class="exp-date">2018 &ndash; <span data-i18n="exp.present">present</span></span>
+              <h4 data-i18n="exp.freelance.title">Freelance Programming &amp; Tutoring</h4>
+              <p data-i18n="exp.freelance.desc">Project-based instruction, research and consulting in Python, MATLAB, C++, Java, ML/DL, data analysis, Power BI and Arduino.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- professional activities, awards & selected projects -->
+  <section id="section-activities" class="section appear clearfix">
+    <div class="container">
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp" data-i18n="activities.heading">Professional Activities &amp; Recognition</h2>
+            <p data-i18n="activities.lede">Reviewing, membership, awards and selected AI projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="cert-card">
+            <h4 data-i18n="activities.reviewing.title">Reviewing &amp; Membership</h4>
+            <p data-i18n="activities.reviewing.desc">Journal reviewer for AMS MathSciNet, Journal of Computational and Applied Mathematics, JAMP, FILOMAT, Mathematical Modeling Journal and Mathematical Science Journal. Conference reviewer, 51st Annual Iranian Mathematics Conference (2021). Member, American Mathematical Society &amp; Iranian Mathematical Society. Book editor, "Introduction to Mathematics" (Prof. Sepehri, Shiraz University).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cert-card">
+            <h4 data-i18n="activities.awards.title">Awards &amp; Achievements</h4>
+            <p data-i18n="activities.awards.desc">First-ranked graduate student across all degrees (GPA &asymp; 4.0). Rank 23 of ~8,000 in the national Ph.D. entrance exam; member, Distinguished Talent Society (2018). Ph.D., M.Sc. and B.Sc. government scholarships (2005&ndash;2018).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cert-card">
+            <h4 data-i18n="activities.projects.title">Selected AI Projects</h4>
+            <p data-i18n="activities.projects.desc">Segmentation of brain regions for Multiple Sclerosis diagnosis via VGG19, VGG16 and ResNet50. Signal processing for speech using FFT and wavelet transforms. Image retrieval using invariant Krawtchouk moments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- certifications & courses -->
+  <section id="section-certs" class="section appear clearfix bg-white">
+    <div class="container">
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp" data-i18n="certs.heading">Certifications, Courses &amp; Seminars</h2>
+            <p data-i18n="certs.lede">Continued learning across machine learning, generative models and applied AI.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="cert-card">
+            <a href="https://coursera.org/share/aa63340c056b76f29e1c521a6bf0b230" target="_blank" rel="noopener" data-i18n="certs.coursera">Machine Learning &mdash; Andrew Ng, Coursera</a>
+            <div class="cert-meta" data-i18n="certs.certification">Certification</div>
+          </div>
+          <div class="cert-card">
+            <a href="https://mila.quebec/en/prospective-students-postdocs/courses-and-schedule" target="_blank" rel="noopener" data-i18n="certs.mila">MILA Courses: Representation Learning, Applied Machine Learning, Advanced Structured Prediction &amp; Optimization, Deep Learning for Computational Pathology</a>
+            <div class="cert-meta">2024&ndash;2025</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="cert-card">
+            <a href="https://kuleshov-group.github.io/dgm-website/" target="_blank" rel="noopener" data-i18n="certs.kuleshov">Machine Learning, Generative Models, AI for Science &mdash; Volodymyr Kuleshov (Cornell Tech), UCLA &amp; Stanford</a>
+            <div class="cert-meta">2024&ndash;2025</div>
+          </div>
+          <div class="cert-card">
+            <a href="https://researchseminars.org/seminar/OneWorldML" target="_blank" rel="noopener" data-i18n="certs.oneworld">[One World ML] Math of Machine Learning Seminars</a>
+            <div class="cert-meta" data-i18n="certs.present">2021&ndash;present</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- spacer section:stats -->
   <section id="parallax1" class="section" data-stellar-background-ratio="0.5">
@@ -423,62 +548,62 @@
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q1journal">Q1 Journal</span>
-                  <h5>Numerical solution of nonlinear Abel integral equations: hp-version collocation approach</h5>
+                  <h5><a href="https://www.sciencedirect.com/science/article/abs/pii/S0168927420303470" target="_blank" rel="noopener">Numerical solution of nonlinear Abel integral equations: hp-version collocation approach <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Applied Numerical Mathematics, 161 (2021)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q1journal">Q1 Journal</span>
-                  <h5>Galerkin finite element method for nonlinear Riemann&ndash;Liouville and Caputo fractional equations</h5>
+                  <h5><a href="https://www.springerprofessional.de/en/galerkin-finite-element-method-for-nonlinear-fractional-differen/18769422" target="_blank" rel="noopener">Galerkin finite element method for nonlinear Riemann&ndash;Liouville and Caputo fractional equations <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Numerical Algorithms (2021)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q1journal">Q1 Journal</span>
-                  <h5>Direct numerical scheme for all classes of nonlinear Volterra integral equations of the first kind</h5>
+                  <h5><a href="https://link.springer.com/article/10.1007/s00009-020-01686-1" target="_blank" rel="noopener">Direct numerical scheme for all classes of nonlinear Volterra integral equations of the first kind <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Mediterranean Journal of Mathematics, 18 (2021)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q1journal">Q1 Journal</span>
-                  <h5>hp-version collocation method for nonlinear Volterra integral equations of the first kind</h5>
+                  <h5><a href="https://www.sciencedirect.com/science/article/abs/pii/S0168927419302818" target="_blank" rel="noopener">hp-version collocation method for nonlinear Volterra integral equations of the first kind <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Journal of Applied Numerical Mathematics, 150 (2020)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q1journal">Q1 Journal</span>
-                  <h5>Adaptive numerical approach using Chebyshev operational vector for nonlinear Volterra integral equations</h5>
+                  <h5><a href="https://www.sciencedirect.com/science/article/pii/S0377042718303170" target="_blank" rel="noopener">Adaptive numerical approach using Chebyshev operational vector for nonlinear Volterra integral equations <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Journal of Computational and Applied Mathematics, 344 (2018)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q3journal">Q3 Journal</span>
-                  <h5>Direct operational matrix approach for weakly singular Volterra integro-differential equations</h5>
+                  <h5><a href="https://hrcak.srce.hr/215150" target="_blank" rel="noopener">Direct operational matrix approach for weakly singular Volterra integro-differential equations <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Mathematical Communications (2018)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem journal">
                 <div class="pub-card"><span class="pub-tag" data-i18n="tagword.q3journal">Q3 Journal</span>
-                  <h5>An operational vector method based on Chebyshev wavelet for Riccati differential equations</h5>
+                  <h5><a href="https://cmde.tabrizu.ac.ir/article_16438_0e2e2f43f5758282d8b0f287ab46ef64.pdf" target="_blank" rel="noopener">An operational vector method based on Chebyshev wavelet for Riccati differential equations <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Computational Methods for Differential Equations (2024)</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem conference">
                 <div class="pub-card"><span class="pub-tag pub-tag-alt" data-i18n="tagword.conference">Conference</span>
-                  <h5>Galerkin FEM for nonlinear boundary value problems with fractional derivatives</h5>
+                  <h5><a href="https://www.csrc.ac.cn/en/event/workshop/2020-01-10/103.html" target="_blank" rel="noopener">Galerkin FEM for nonlinear boundary value problems with fractional derivatives <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>4th Conf. on Numerical Methods for Fractional-Derivative Problems, Beijing, 2020</p>
                 </div>
               </article>
                             <article class="col-md-4 isotopeItem conference">
                 <div class="pub-card"><span class="pub-tag pub-tag-alt" data-i18n="tagword.conference">Conference</span>
-                  <h5>Legendre wavelets direct method for Fredholm integral equations of the first kind</h5>
+                  <h5><a href="https://www.iaeng.org/publication/WCE2016/WCE2016_pp35-38.pdf" target="_blank" rel="noopener">Legendre wavelets direct method for Fredholm integral equations of the first kind <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>World Congress on Engineering, London, 2016 &middot; cited 17+</p>
                 </div>
               </article>
@@ -526,14 +651,14 @@
 
               <article class="col-md-4 isotopeItem review">
                 <div class="pub-card"><span class="pub-tag pub-tag-review" data-i18n="tagword.review">Under Review</span>
-                  <h5>A novel adaptive deep network for building footprint segmentation</h5>
+                  <h5><a href="https://arxiv.org/abs/2103.00286" target="_blank" rel="noopener">A novel adaptive deep network for building footprint segmentation <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>Multimedia Tools and Applications, 2024 &middot; cited 10+</p>
                 </div>
               </article>
 
               <article class="col-md-4 isotopeItem review">
                 <div class="pub-card"><span class="pub-tag pub-tag-review" data-i18n="tagword.review">Under Review</span>
-                  <h5>Spectral element approximation of semilinear two-sided fractional differential equations</h5>
+                  <h5><a href="https://insf.org/en" target="_blank" rel="noopener">Spectral element approximation of semilinear two-sided fractional differential equations <i class="fa fa-external-link" style="font-size:11px;"></i></a></h5>
                   <p>2024 &middot; funded by Iran National Science Foundation</p>
                 </div>
               </article>
@@ -571,11 +696,33 @@
         </div>
       </div>
       <div class="row mar-bot40">
-        <div class="col-md-8 col-md-offset-2 align-center">
-          <a href="mailto:r.dehbozorgi2012@gmail.com" class="btn btn-theme mar-right20">r.dehbozorgi2012@gmail.com</a>
-          <a href="tel:+989100074178" class="btn btn-cta mar-right20">+98 910 007 4178</a>
-          <a href="https://wa.me/989335934309" target="_blank" rel="noopener" class="btn btn-theme mar-right20">WhatsApp (Freelance)</a>
-          <a href="https://t.me/+989335934309" target="_blank" rel="noopener" class="btn btn-cta">Telegram (Freelance)</a>
+        <div class="col-md-10 col-md-offset-1 align-center">
+          <div class="contact-icon-grid">
+            <a href="mailto:r.dehbozorgi2012@gmail.com" class="contact-icon" title="Email">
+              <i class="fa fa-envelope"></i><span data-i18n="contact.email">Email</span>
+            </a>
+            <a href="tel:+989100074178" class="contact-icon" title="Phone">
+              <i class="fa fa-phone"></i><span>+98 910 007 4178</span>
+            </a>
+            <a href="https://wa.me/989335934309" target="_blank" rel="noopener" class="contact-icon" title="WhatsApp">
+              <i class="fa fa-mobile"></i><span data-i18n="contact.whatsapp">WhatsApp (Freelance)</span>
+            </a>
+            <a href="https://t.me/+989335934309" target="_blank" rel="noopener" class="contact-icon" title="Telegram">
+              <i class="fa fa-paper-plane"></i><span data-i18n="contact.telegram">Telegram (Freelance)</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=hD6NA08AAAAJ" target="_blank" rel="noopener" class="contact-icon" title="Google Scholar">
+              <i class="fa fa-graduation-cap"></i><span>Google Scholar</span>
+            </a>
+            <a href="https://www.linkedin.com/in/raziyeh-dehbozorgi-23531958" target="_blank" rel="noopener" class="contact-icon" title="LinkedIn">
+              <i class="fa fa-linkedin"></i><span>LinkedIn</span>
+            </a>
+            <a href="https://www.researchgate.net/profile/Raziyeh-Dehbozorgi" target="_blank" rel="noopener" class="contact-icon" title="ResearchGate">
+              <i class="fa fa-flask"></i><span>ResearchGate</span>
+            </a>
+            <a href="https://github.com/rdehbozorgi" target="_blank" rel="noopener" class="contact-icon" title="GitHub">
+              <i class="fa fa-github"></i><span>GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="row">

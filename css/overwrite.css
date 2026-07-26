@@ -404,23 +404,131 @@ body{ color:#4a4a4a; }
 .math-accent{ display:block; margin:0 auto 24px; max-width:340px; }
 .math-accent svg{ width:100%; height:auto; }
 
-/* ===== Language switcher ===== */
-.lang-switcher{ display:flex; align-items:center; gap:4px; }
-.lang-switcher .lang-btn{
-  padding:4px 9px !important;
-  font-size:12px;
+/* ===== Language dashboard dropdown (sits left of the logo, on the right of navbar) ===== */
+.navbar-header{ display:flex; align-items:center; gap:14px; }
+.navbar-logo{ margin:0; }
+.lang-dashboard{ position:relative; }
+.lang-dashboard-toggle{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.35);
+  color:#fff;
+  border-radius:6px;
+  padding:7px 12px;
+  font-size:13px;
   font-weight:700;
   letter-spacing:.03em;
-  border:1px solid rgba(255,255,255,0.4);
-  border-radius:4px;
-  color:#fff !important;
-  opacity:.7;
+  cursor:pointer;
 }
-.lang-switcher .lang-btn.active,
-.lang-switcher .lang-btn:hover{
-  opacity:1;
-  background:rgba(255,255,255,0.15);
+.lang-dashboard-toggle:hover{ background:rgba(255,255,255,0.18); }
+.lang-dashboard-menu{
+  display:none;
+  position:absolute;
+  top:calc(100% + 8px);
+  right:0;
+  background:#0e2b38;
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:8px;
+  list-style:none;
+  margin:0;
+  padding:6px;
+  min-width:140px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.35);
+  z-index:1000;
+}
+.lang-dashboard-menu.open{ display:block; }
+.lang-dashboard-menu li{ margin:0; }
+.lang-dashboard-menu .lang-btn{
+  display:block;
+  padding:8px 12px;
+  border-radius:5px;
+  color:#e7eef0 !important;
+  font-size:13px;
+  font-weight:600;
+}
+.lang-dashboard-menu .lang-btn.active,
+.lang-dashboard-menu .lang-btn:hover{
+  background:rgba(255,255,255,0.12);
+  color:#fff !important;
 }
 @media (max-width:767px){
-  .lang-switcher{ justify-content:center; padding:10px 0; }
+  .navbar-header{ flex-wrap:wrap; justify-content:flex-end; }
 }
+
+/* ===== RTL support when Persian is selected ===== */
+html[lang="fa"] body{ direction:rtl; text-align:right; }
+html[lang="fa"] .navbar-header{ flex-direction:row-reverse; }
+html[lang="fa"] .nav.navbar-left{ float:right !important; }
+html[lang="fa"] .lang-dashboard-menu{ right:auto; left:0; }
+
+/* ===== Contact icon grid ===== */
+.contact-icon-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+.contact-icon{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:12px 18px;
+  border-radius:8px;
+  border:1px solid #d7e6ea;
+  background:#f7fafb;
+  color:#2f4144 !important;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none !important;
+  transition:all .2s ease;
+}
+.contact-icon i{ font-size:18px; color:#85b0be; }
+.contact-icon:hover{
+  background:#2f4144;
+  color:#fff !important;
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(20,50,60,0.18);
+}
+.contact-icon:hover i{ color:#95cbdd; }
+@media (max-width:600px){
+  .contact-icon{ padding:10px 14px; font-size:13px; }
+}
+
+/* ===== Publication title links ===== */
+.pub-card h5 a{
+  color:#2b2b2b;
+  text-decoration:none;
+}
+.pub-card h5 a:hover{
+  color:#2f4144;
+  text-decoration:underline;
+}
+.pub-card h5 a i{ color:#85b0be; margin-left:4px; }
+
+/* ===== Certifications / courses cards ===== */
+.cert-card{
+  border:1px solid #e2edf0;
+  border-radius:6px;
+  padding:18px 20px;
+  background:#f7fafb;
+  margin-bottom:16px;
+}
+.cert-card a{ font-weight:700; color:#2f4144; }
+.cert-card .cert-meta{ color:#8a9aa0; font-size:12px; margin-top:6px; }
+
+/* ===== Experience timeline (teaching / freelance / activities) ===== */
+.exp-timeline{ position:relative; padding-left:26px; border-left:2px solid #d7e6ea; }
+.exp-item{ position:relative; padding-bottom:28px; }
+.exp-item:last-child{ padding-bottom:0; }
+.exp-item::before{
+  content:"";
+  position:absolute; left:-32px; top:4px;
+  width:10px; height:10px; border-radius:50%;
+  background:#85b0be; border:3px solid #fff;
+  box-shadow:0 0 0 1px #85b0be;
+}
+.exp-item .exp-date{
+  font-size:12px; text-transform:uppercase; letter-spacing:.05em;
+  color:#85b0be; font-weight:700;
+}
+.exp-item h4{ margin:6px 0 2px; font-size:16px; }
+.exp-item p{ color:#4a4a4a; font-size:14px; margin:4px 0 0; }
