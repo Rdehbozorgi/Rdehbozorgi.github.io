@@ -303,37 +303,18 @@
         el.innerHTML = dict[key];
       }
     });
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-    });
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
-    var labelEl = document.getElementById('langCurrent');
-    if (labelEl) { labelEl.textContent = lang.toUpperCase(); }
+    var select = document.getElementById('langSelect');
+    if (select && select.value !== lang) { select.value = lang; }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
     cacheOriginals();
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        setLang(btn.getAttribute('data-lang'));
-        var menu = document.getElementById('langMenu');
-        if (menu) { menu.classList.remove('open'); }
-      });
-    });
-    var toggle = document.getElementById('langToggle');
-    var menu = document.getElementById('langMenu');
-    if (toggle && menu) {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        menu.classList.toggle('open');
-      });
-      document.addEventListener('click', function (e) {
-        if (!menu.contains(e.target) && e.target !== toggle) {
-          menu.classList.remove('open');
-        }
+    var select = document.getElementById('langSelect');
+    if (select) {
+      select.addEventListener('change', function () {
+        setLang(select.value);
       });
     }
   });
